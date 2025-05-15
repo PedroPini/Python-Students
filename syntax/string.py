@@ -16,31 +16,44 @@ ut labore et dolore magna aliqua.
 
 # String as Array ["H", "e", "l", "l", "o", ",", " ", "W", "o", "r", "l", "d"]
 a = "Hello, World!"
-print(len(a))
+# print(len(a))
 # Loop through using FOR
-for printing in a:
-    print(printing)
-print(a[0])
+# for printing in a:
+#     print(printing)
+# print(a[0])
 
 
 # Check String
 txt = "The best things in life are free!"
 
-print("free" in txt)
+# print("free" in txt)
 
 # IF AND ELSE STATEMENTS
-if "free" in txt:
-    print("Yes, 'free' is present")
+# if "free" in txt:
+#     print("Yes, 'free' is present")
 
 # Not IN
-print("things" not in txt)
+# print("things" not in txt)
 
-if "free" not in txt:
-    print("No, 'free' is not present")
-else:
-    print("Yes, It's present")
+# if "free" not in txt:
+#     print("No, 'free' is not present")
+# else:
+#     print("Yes, It's present")
+
+
+#Index:   0 1 2 3 4 5 6 7 8 9 10 11 12
+# String: H e l l o ,   W  o  r  l  d  !
 
 
 # Slicing
 b = "Hello, World!"
-print(b[2:5])
+# print(b[2:5])
+
+# Slicing from start
+# print(b[:5])
+
+# Slicing from end
+# print(b[2:])
+
+# Slicing Negative
+# print(b[-5:-2])
