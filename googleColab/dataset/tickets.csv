@@ -1,0 +1,21 @@
+ticket_id,ticket_text,category
+1,App crashes whenever I try to open it.,Technical
+2,Can't connect to the server.,Technical
+3,My device keeps restarting after the update.,Technical
+4,Having trouble installing the software.,Technical
+5,System freezes during login.,Technical
+6,I was charged twice for my subscription.,Billing
+7,Payment failed but money was deducted.,Billing
+8,Need an invoice for last month.,Billing
+9,Refund hasn't been processed yet.,Billing
+10,Why is there a late fee on my bill?,Billing
+11,How can I reset my password?,General
+12,Where do I find your terms and conditions?,General
+13,Need help understanding your services.,General
+14,Can I change my account email?,General
+15,What are your customer service hours?,General
+16,The update broke my app completely.,
+17,Can't find any payment history.,
+18,Do you offer phone support?,
+19,App lags after logging in.,
+20,Still waiting for my refund.,
