@@ -101,4 +101,46 @@ def display_charts(df):
             expenses['Month'] = expenses['Date'].dt.to_period('M').astype(str)
             monthly_expenses = expenses.groupby('Month')['Amount'].sum()
 
+            fig2, ax2 = plt.subplots()
+            monthly_expenses.plot.line(ax=ax2, marker="o")
+            ax2.set_title("Total Monthly Expenses")
+            ax2.set_ylabel("Amount ($)")
+            ax2.tick_params(axis="x", rotation=45)
+            st.pyplot(fig2)
+    else:
+        st.info("No expense data available")
+
+def main():
+    st.title("💰 Personal Finance Tracker")
+    st.markdown("Track you income and expenses with visual analytics")
+
+    #load data
+    df = load_data()
+
+    #input form
+    input_form()
+    st.divider()
+
+    #Show Raw Dataframe
+    if st.checkbox("Show Raw Data"):
+        st.dataframe(
+            df.assign(Date=pd.to_datetime(df['Date'], errors='coerce').dt.strftime('%d/%m/%Y'))
+        )
+    
+    st.header("Spending Analysis")
+    #show money left
+    income_total, expense_total, balance = calculate_balance(df)
+    col1, col2, col3 = st.columns(3)
+    col1.metric("💵 Total Income", f"${income_total:,.2f}")
+    col2.metric("💸 Total Expenses", f"${expense_total:,.2f}")
+    col3.metric("📊 Money Left", f"${balance:,.2f}")
+
+    #display chart
+    if not df.empty:
+        display_charts(df)
+    else:
+        st.info("Add your first entry to see visualizations")
+
+if __name__ == "__main__":
+    main()
         
